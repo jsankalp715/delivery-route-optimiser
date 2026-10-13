@@ -1,0 +1,106 @@
+{
+ "name": "demo_grocery_capacity_10",
+ "vehicle_capacity": 100,
+ "num_vehicles": 5,
+ "depot": {
+  "x": 20,
+  "y": 20,
+  "ready_time": 0,
+  "due_time": 480
+ },
+ "customers": [
+  {
+   "id": 1,
+   "x": 30,
+   "y": 70,
+   "demand": 40,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 2,
+   "x": 35,
+   "y": 75,
+   "demand": 35,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 3,
+   "x": 25,
+   "y": 80,
+   "demand": 30,
+   "ready_time": 60,
+   "due_time": 300,
+   "service_time": 15
+  },
+  {
+   "id": 4,
+   "x": 75,
+   "y": 25,
+   "demand": 45,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 5,
+   "x": 80,
+   "y": 30,
+   "demand": 25,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 6,
+   "x": 85,
+   "y": 20,
+   "demand": 30,
+   "ready_time": 120,
+   "due_time": 420,
+   "service_time": 15
+  },
+  {
+   "id": 7,
+   "x": 60,
+   "y": 60,
+   "demand": 50,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 8,
+   "x": 65,
+   "y": 65,
+   "demand": 20,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 9,
+   "x": 15,
+   "y": 45,
+   "demand": 35,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  },
+  {
+   "id": 10,
+   "x": 50,
+   "y": 10,
+   "demand": 40,
+   "ready_time": 0,
+   "due_time": 400,
+   "service_time": 15
+  }
+ ],
+ "metadata": {
+  "description": "Hand-made: grocery deliveries where vehicle capacity (100 crates) is the binding constraint."
+ }
+}

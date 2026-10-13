@@ -1,0 +1,13 @@
+# Tiny grid used to smoke-test the harness end to end (about 1 minute).
+name: smoke
+sizes: [10, 20]
+types: [C, R, RC]
+seeds: [1, 2]
+tw_cycle: [tight, loose]
+capacity: medium
+ilp:
+  time_limit: {10: 5, 20: 8}
+  num_workers: 0
+reference:
+  time_limit_per_customer: 0.1
+output_dir: results/smoke

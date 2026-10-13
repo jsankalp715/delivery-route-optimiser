@@ -1,0 +1,88 @@
+{
+ "name": "demo_bakery_8",
+ "vehicle_capacity": 60,
+ "num_vehicles": 3,
+ "depot": {
+  "x": 50,
+  "y": 50,
+  "ready_time": 0,
+  "due_time": 240
+ },
+ "customers": [
+  {
+   "id": 1,
+   "x": 62,
+   "y": 58,
+   "demand": 10,
+   "ready_time": 0,
+   "due_time": 60,
+   "service_time": 5
+  },
+  {
+   "id": 2,
+   "x": 70,
+   "y": 45,
+   "demand": 15,
+   "ready_time": 20,
+   "due_time": 90,
+   "service_time": 5
+  },
+  {
+   "id": 3,
+   "x": 55,
+   "y": 30,
+   "demand": 12,
+   "ready_time": 60,
+   "due_time": 150,
+   "service_time": 5
+  },
+  {
+   "id": 4,
+   "x": 35,
+   "y": 35,
+   "demand": 8,
+   "ready_time": 0,
+   "due_time": 45,
+   "service_time": 5
+  },
+  {
+   "id": 5,
+   "x": 25,
+   "y": 55,
+   "demand": 20,
+   "ready_time": 30,
+   "due_time": 120,
+   "service_time": 5
+  },
+  {
+   "id": 6,
+   "x": 40,
+   "y": 75,
+   "demand": 10,
+   "ready_time": 90,
+   "due_time": 180,
+   "service_time": 5
+  },
+  {
+   "id": 7,
+   "x": 60,
+   "y": 80,
+   "demand": 14,
+   "ready_time": 120,
+   "due_time": 200,
+   "service_time": 5
+  },
+  {
+   "id": 8,
+   "x": 80,
+   "y": 70,
+   "demand": 9,
+   "ready_time": 0,
+   "due_time": 240,
+   "service_time": 5
+  }
+ ],
+ "metadata": {
+  "description": "Hand-made: bakery morning run, 8 cafes, times in minutes after 06:00, capacity in trays."
+ }
+}

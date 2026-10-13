@@ -1,0 +1,19 @@
+# Main benchmark grid (about 45-50 min wall clock on a 4-core machine).
+#   python benchmarks/run_benchmark.py --config benchmarks/config.yaml
+name: main
+sizes: [20, 30, 50, 75]
+types: [C, R, RC]
+seeds: [1, 2, 3, 4, 5, 6, 7, 8]
+# Seed k uses tw_cycle[(k - 1) % 2]: odd seeds tight windows, even seeds loose windows,
+# i.e. 4 tight + 4 loose instances in every (size, type) cell.
+tw_cycle: [tight, loose]
+capacity: medium
+ilp:
+  # Wall-clock limit per instance in seconds (60 s at 50 stops, as for the CLI default).
+  time_limit: {20: 20, 30: 30, 50: 60, 75: 75}
+  num_workers: 0          # 0 = all cores
+  vehicle_objective: none # pure distance
+reference:
+  time_limit_per_customer: 0.2   # routing-library GLS: 10 s at 50 stops (single thread)
+phase1_processes: 0       # 0 = one process per core for greedy + reference
+output_dir: results
