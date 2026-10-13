@@ -245,7 +245,9 @@ dress-rehearsal run of the same grid, made before a corner-case fix to the depot
   777.2 with a bound of 742 (gap 4.6 %), and a tight-window instance went from "time limit, gap 18 %" to
   "proven optimal". This trades a possible ~1 % in primal quality (single runs, noisy) for
   meaningful gaps and early termination. 2 workers × 60 s was worse (787.1, single trial) than 4 workers, so
-  the benchmark runs one instance at a time with all cores.
+  the benchmark runs one instance at a time with all cores. Neither calibration instance
+  (RC50-loose-s1, C50-tight-s2) is in the benchmark grid, where seed 1 is tight and seed 2 is loose,
+  so nothing was tuned on test instances.
 - **Time limits** 20/30/60/75 s (60 s at 50 stops as specified). 75 s at 75 stops instead of the
   1.2 s/stop CLI rule (90 s) keeps the full benchmark at about 40 minutes. n = 100 was left out of the
   main grid for the same reason; the model and CLI handle it (default limit 120 s).
