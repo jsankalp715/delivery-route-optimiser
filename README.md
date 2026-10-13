@@ -146,13 +146,15 @@ RC50-loose-medium-s1: n=50, Q=150, fleet=27
 
 method         distance  vs greedy  vehicles     status     gap  time(s)  valid
 -------------------------------------------------------------------------------
-greedy          1159.34      -0.0%         9  HEURISTIC       -     0.00    yes
+greedy          1159.34      +0.0%         9  HEURISTIC       -     0.00    yes
 greedy-tonn     1027.45     -11.4%         7  HEURISTIC       -     0.00    yes
-ilp              769.39     -33.6%         6   FEASIBLE    3.6%    30.05    yes
+ilp              782.01     -32.5%         7   FEASIBLE    5.4%    30.05    yes
 reference        780.12     -32.7%         6  HEURISTIC       -    10.00    yes
 
 plot (greedy vs ILP) written to results/demo/rc50_greedy_vs_ilp.png
 ```
+
+Re-running gives slightly different ILP values because multithreaded CP-SAT is not deterministic. Three 30 s runs of this instance gave 769.4, 778.0 and 782.0. At this short limit the ILP and the 10 s routing-library reference are within about 1 % of each other, and both are about a third shorter than greedy. (Five 60 s calibration runs with different CP-SAT portfolios and worker counts gave 768.1 to 787.1; see Design decisions.)
 
 ## Results
 

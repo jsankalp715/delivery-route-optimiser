@@ -115,7 +115,7 @@ def cmd_compare(args: argparse.Namespace) -> int:
         ok = validate(inst, s).ok
         ok_all &= ok
         gap = f"{100 * s.gap:.1f}%" if s.gap is not None else "-"
-        red = f"{-100 * (base - s.total_distance) / base:+.1f}%"
+        red = f"{100 * (s.total_distance - base) / base:+.1f}%"
         print(
             f"{s.method:<12} {s.total_distance:>10.2f} {red:>10} {s.vehicles_used:>9} {s.status:>10} "
             f"{gap:>7} {s.solve_time:>8.2f} {'yes' if ok else 'NO':>6}"
