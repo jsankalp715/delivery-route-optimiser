@@ -1,0 +1,10 @@
+RC50-loose-medium-s1: n=50, Q=150, fleet=27
+
+method         distance  vs greedy  vehicles     status     gap  time(s)  valid
+-------------------------------------------------------------------------------
+greedy          1159.34      -0.0%         9  HEURISTIC       -     0.00    yes
+greedy-tonn     1027.45     -11.4%         7  HEURISTIC       -     0.00    yes
+ilp              769.39     -33.6%         6   FEASIBLE    3.6%    30.05    yes
+reference        780.12     -32.7%         6  HEURISTIC       -    10.00    yes
+
+plot (greedy vs ILP) written to results/demo/rc50_greedy_vs_ilp.png

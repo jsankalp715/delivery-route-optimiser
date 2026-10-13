@@ -1,0 +1,539 @@
+{
+ "name": "RC50-loose-medium-s1",
+ "vehicle_capacity": 150,
+ "num_vehicles": 27,
+ "depot": {
+  "x": 50.0,
+  "y": 50.0,
+  "ready_time": 0.0,
+  "due_time": 359.0
+ },
+ "customers": [
+  {
+   "id": 1,
+   "x": 59.7,
+   "y": 34.3,
+   "demand": 15,
+   "ready_time": 0.0,
+   "due_time": 94.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 2,
+   "x": 83.6,
+   "y": 20.0,
+   "demand": 12,
+   "ready_time": 0.0,
+   "due_time": 142.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 3,
+   "x": 15.9,
+   "y": 80.4,
+   "demand": 13,
+   "ready_time": 0.0,
+   "due_time": 150.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 4,
+   "x": 75.4,
+   "y": 86.0,
+   "demand": 22,
+   "ready_time": 12.0,
+   "due_time": 119.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 5,
+   "x": 70.4,
+   "y": 76.2,
+   "demand": 12,
+   "ready_time": 0.0,
+   "due_time": 86.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 6,
+   "x": 74.0,
+   "y": 85.3,
+   "demand": 25,
+   "ready_time": 49.0,
+   "due_time": 159.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 7,
+   "x": 75.5,
+   "y": 78.5,
+   "demand": 18,
+   "ready_time": 0.0,
+   "due_time": 110.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 8,
+   "x": 61.3,
+   "y": 33.2,
+   "demand": 28,
+   "ready_time": 26.0,
+   "due_time": 154.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 9,
+   "x": 25.3,
+   "y": 79.2,
+   "demand": 13,
+   "ready_time": 0.0,
+   "due_time": 109.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 10,
+   "x": 70.6,
+   "y": 80.4,
+   "demand": 11,
+   "ready_time": 0.0,
+   "due_time": 116.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 11,
+   "x": 59.1,
+   "y": 17.6,
+   "demand": 18,
+   "ready_time": 2.0,
+   "due_time": 146.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 12,
+   "x": 76.4,
+   "y": 78.0,
+   "demand": 16,
+   "ready_time": 0.0,
+   "due_time": 142.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 13,
+   "x": 36.5,
+   "y": 42.7,
+   "demand": 20,
+   "ready_time": 223.0,
+   "due_time": 333.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 14,
+   "x": 14.5,
+   "y": 51.9,
+   "demand": 12,
+   "ready_time": 0.0,
+   "due_time": 138.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 15,
+   "x": 62.4,
+   "y": 35.2,
+   "demand": 27,
+   "ready_time": 0.0,
+   "due_time": 83.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 16,
+   "x": 73.7,
+   "y": 86.1,
+   "demand": 7,
+   "ready_time": 0.0,
+   "due_time": 87.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 17,
+   "x": 78.3,
+   "y": 85.5,
+   "demand": 5,
+   "ready_time": 101.0,
+   "due_time": 245.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 18,
+   "x": 73.6,
+   "y": 82.3,
+   "demand": 15,
+   "ready_time": 47.0,
+   "due_time": 205.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 19,
+   "x": 69.4,
+   "y": 89.3,
+   "demand": 28,
+   "ready_time": 0.0,
+   "due_time": 101.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 20,
+   "x": 73.4,
+   "y": 32.5,
+   "demand": 13,
+   "ready_time": 73.0,
+   "due_time": 219.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 21,
+   "x": 63.0,
+   "y": 40.2,
+   "demand": 26,
+   "ready_time": 0.0,
+   "due_time": 112.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 22,
+   "x": 71.3,
+   "y": 36.1,
+   "demand": 22,
+   "ready_time": 0.0,
+   "due_time": 86.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 23,
+   "x": 67.4,
+   "y": 81.6,
+   "demand": 10,
+   "ready_time": 42.0,
+   "due_time": 193.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 24,
+   "x": 24.6,
+   "y": 20.1,
+   "demand": 16,
+   "ready_time": 69.0,
+   "due_time": 197.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 25,
+   "x": 69.1,
+   "y": 83.3,
+   "demand": 10,
+   "ready_time": 24.0,
+   "due_time": 159.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 26,
+   "x": 66.8,
+   "y": 35.5,
+   "demand": 23,
+   "ready_time": 86.0,
+   "due_time": 198.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 27,
+   "x": 19.5,
+   "y": 37.5,
+   "demand": 29,
+   "ready_time": 35.0,
+   "due_time": 206.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 28,
+   "x": 17.9,
+   "y": 85.6,
+   "demand": 11,
+   "ready_time": 65.0,
+   "due_time": 180.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 29,
+   "x": 63.0,
+   "y": 39.7,
+   "demand": 19,
+   "ready_time": 2.0,
+   "due_time": 157.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 30,
+   "x": 71.6,
+   "y": 81.7,
+   "demand": 25,
+   "ready_time": 0.0,
+   "due_time": 69.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 31,
+   "x": 30.8,
+   "y": 54.7,
+   "demand": 8,
+   "ready_time": 0.0,
+   "due_time": 43.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 32,
+   "x": 71.1,
+   "y": 9.3,
+   "demand": 7,
+   "ready_time": 48.0,
+   "due_time": 183.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 33,
+   "x": 44.1,
+   "y": 6.3,
+   "demand": 20,
+   "ready_time": 34.0,
+   "due_time": 140.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 34,
+   "x": 85.4,
+   "y": 79.3,
+   "demand": 11,
+   "ready_time": 28.0,
+   "due_time": 208.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 35,
+   "x": 84.2,
+   "y": 79.1,
+   "demand": 14,
+   "ready_time": 54.0,
+   "due_time": 159.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 36,
+   "x": 10.0,
+   "y": 0.2,
+   "demand": 5,
+   "ready_time": 67.0,
+   "due_time": 240.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 37,
+   "x": 79.2,
+   "y": 36.0,
+   "demand": 25,
+   "ready_time": 28.0,
+   "due_time": 195.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 38,
+   "x": 70.1,
+   "y": 30.8,
+   "demand": 19,
+   "ready_time": 0.0,
+   "due_time": 154.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 39,
+   "x": 72.7,
+   "y": 18.8,
+   "demand": 21,
+   "ready_time": 50.0,
+   "due_time": 170.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 40,
+   "x": 70.3,
+   "y": 26.6,
+   "demand": 27,
+   "ready_time": 0.0,
+   "due_time": 76.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 41,
+   "x": 67.8,
+   "y": 82.2,
+   "demand": 24,
+   "ready_time": 37.0,
+   "due_time": 131.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 42,
+   "x": 86.8,
+   "y": 26.6,
+   "demand": 28,
+   "ready_time": 21.0,
+   "due_time": 201.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 43,
+   "x": 38.8,
+   "y": 43.8,
+   "demand": 17,
+   "ready_time": 196.0,
+   "due_time": 290.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 44,
+   "x": 71.8,
+   "y": 32.2,
+   "demand": 25,
+   "ready_time": 65.0,
+   "due_time": 228.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 45,
+   "x": 27.8,
+   "y": 43.7,
+   "demand": 6,
+   "ready_time": 70.0,
+   "due_time": 242.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 46,
+   "x": 96.1,
+   "y": 77.1,
+   "demand": 28,
+   "ready_time": 104.0,
+   "due_time": 235.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 47,
+   "x": 66.5,
+   "y": 75.8,
+   "demand": 13,
+   "ready_time": 6.0,
+   "due_time": 150.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 48,
+   "x": 35.9,
+   "y": 37.6,
+   "demand": 5,
+   "ready_time": 127.0,
+   "due_time": 263.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 49,
+   "x": 71.0,
+   "y": 90.8,
+   "demand": 19,
+   "ready_time": 34.0,
+   "due_time": 163.0,
+   "service_time": 10.0
+  },
+  {
+   "id": 50,
+   "x": 30.0,
+   "y": 14.0,
+   "demand": 30,
+   "ready_time": 205.0,
+   "due_time": 307.0,
+   "service_time": 10.0
+  }
+ ],
+ "metadata": {
+  "generator": "route_opt.generator",
+  "layout": "RC",
+  "n": 50,
+  "seed": 1,
+  "tw": "loose",
+  "capacity": "medium",
+  "tw_mode": "planted",
+  "reference_routes": [
+   [
+    31,
+    9,
+    28,
+    3,
+    14,
+    27,
+    24,
+    45,
+    48,
+    13,
+    43
+   ],
+   [
+    1,
+    8,
+    11,
+    39,
+    32,
+    33,
+    36,
+    50
+   ],
+   [
+    15,
+    40,
+    2,
+    44,
+    38,
+    26
+   ],
+   [
+    21,
+    22,
+    37,
+    42,
+    20,
+    29
+   ],
+   [
+    5,
+    12,
+    7,
+    18,
+    4,
+    17,
+    35,
+    34,
+    46
+   ],
+   [
+    47,
+    10,
+    30,
+    6,
+    16,
+    49,
+    25,
+    41,
+    23
+   ],
+   [
+    19
+   ]
+  ],
+  "reference_distance": 854.67
+ }
+}

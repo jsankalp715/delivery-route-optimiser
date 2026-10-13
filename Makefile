@@ -10,7 +10,7 @@ setup:            ## create the venv and install the package + dev tools (pinned
 	$(BIN)/pip install -r requirements.txt
 	$(BIN)/pip install -e ".[dev]"
 
-test:             ## run the test suite (~1-2 min)
+test:             ## run the test suite (~30 s)
 	$(BIN)/pytest -q
 
 lint:             ## ruff lint + format check
