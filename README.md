@@ -155,6 +155,23 @@ wall-clock for 20 / 30 / 50 / 75 stops with 4 CP-SAT workers on a 4-core machine
 reference gets 0.2 s per stop on one thread. The whole run took [[RUNTIME_MIN]] minutes. Reduction =
 (greedy − ILP) / greedy, per instance.
 
+**Key findings**
+
+1. **Distance:** [[ALL_MEAN]] shorter on average (median [[ALL_MEDIAN]], range [[ALL_MIN]] to [[ALL_MAX]]); [[BIG_MEAN]] at 50+ stops.
+   It is never worse than greedy (guaranteed by construction and checked on every instance).
+2. **Window regime matters:** [[TIGHT_MEAN]] with tight windows vs [[LOOSE_MEAN]] with loose windows. With tight windows,
+   nearest neighbour waits for the closest customer and strands others.
+3. **Fewer vehicles as a side effect:** [[VEH_BASE_MEAN]] → [[VEH_ILP_MEAN]] vehicles on average, although
+   vehicles are not in the objective.
+4. **A stronger greedy closes part of the gap:** against Solomon's time-oriented NN the ILP is [[TONN_ALL_MEAN]] shorter
+   ([[TONN_BIG_MEAN]] at 50+ stops). Part of the headline number is therefore the plain NN's weakness.
+5. **Optimality is proven only on smaller or tighter instances:** all 20-stop instances,
+   [[OPT_50]]/24 at 50 stops and [[OPT_75]]/24 at 75 stops. The remaining instances stop at the time limit with
+   a mean proven gap of [[GAP_BIG_MEAN]] at 50+ stops.
+6. **The independent routing engine agrees closely:** mean ILP length relative to the OR-Tools routing reference is
+   [[ILP_VS_REF_ALL]]. The ILP is ≤ the reference on [[ILP_LE_REF]]/[[N_INSTANCES]] instances, and on large loose-window
+   instances the reference is sometimes better (ILP up to [[ILP_VS_REF_MAX]] longer).
+
 ### Distance reduction vs greedy nearest neighbour
 
 [[REDUCTION_TABLE]]

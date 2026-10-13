@@ -13,3 +13,4 @@ results/_partial.jsonl
 *.log
 !results/**/*.log
 !results/*.log
+results/chain_status.txt
