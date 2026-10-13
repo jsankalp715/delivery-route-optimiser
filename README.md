@@ -400,9 +400,13 @@ dress-rehearsal run of the same grid, made before a corner-case fix to the depot
 
 ```
 src/route_opt/        model, generator, baseline, ilp, reference_solver, validate, bench, plotting, cli
-benchmarks/           run_benchmark.py, config.yaml (main grid), smoke.yaml
+benchmarks/           run_benchmark.py, config.yaml (main grid), config_random_windows.yaml,
+                      config_n100.yaml (probes), smoke.yaml
 data/                 3 hand-made demo instances (2 JSON, 1 Solomon-format .txt)
 docs/formulation.md   exact mathematical model
-results/              benchmark.csv, summary.{md,json}, solutions.jsonl, plots, benchmark.log
+results/              final run: benchmark.csv, summary.{md,json}, solutions.jsonl, plots, benchmark.log
+results/random_windows/, results/n100/   robustness probes (same file layout)
+results/rehearsal/    superseded dress-rehearsal run (reproducibility check)
+results/demo/         CLI compare example (instance + captured output)
 tests/                pytest suite incl. brute-force optimum (tests/brute_force.py)
 ```
