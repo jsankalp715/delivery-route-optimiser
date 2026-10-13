@@ -138,6 +138,7 @@ def generate_instance(
     tw: str = "tight",
     capacity: str = "medium",
     name: str | None = None,
+    tw_mode: str = "planted",
 ) -> Instance:
     """Generate a feasible Solomon-style CVRPTW instance.
 
@@ -148,6 +149,12 @@ def generate_instance(
         tw: ``"tight"`` or ``"loose"`` time-window widths.
         capacity: ``"tight"``, ``"medium"`` or ``"loose"`` vehicle capacity.
         name: optional instance name.
+        tw_mode: ``"planted"`` (default; windows drawn around the reference plan's arrival times,
+            feasible with the reference plan's vehicles) or ``"random"`` (Solomon R-style
+            independent windows: centre uniform over the times at which the customer can be
+            served directly from the depot; feasible because a dedicated vehicle can always serve
+            any single customer, and the fleet is set to n). ``"random"`` is used only for the
+            robustness check against planted-window bias.
 
     Complexity: O(n^2) time and memory (distance matrix), O(n log n) for the sweep.
     """
@@ -159,6 +166,8 @@ def generate_instance(
         raise ValueError(f"capacity must be one of {tuple(CAPACITY_LEVELS)}")
     if n_customers < 1:
         raise ValueError("n_customers must be >= 1")
+    if tw_mode not in ("planted", "random"):
+        raise ValueError("tw_mode must be 'planted' or 'random'")
 
     # Independent streams: geometry/demand depend only on (seed, n, layout); windows on the rest.
     ss = np.random.SeedSequence([seed, n_customers, LAYOUTS.index(layout)])
@@ -194,17 +203,24 @@ def generate_instance(
         longest = max(longest, t + svc + d[prev][0])
     horizon = math.ceil(longest / SCALE * HORIZON_SLACK)
 
-    # Draw each window so that it contains the reference arrival time.
     lo, hi = TW_WIDTH[tw]
     customers = []
     for c in range(1, n_customers + 1):
-        a = arrival[c] / SCALE
         width = rng_tw.uniform(lo, hi) * horizon
-        offset = rng_tw.uniform(0.0, width)  # where a_i falls inside the window
-        ready = max(0, math.floor(a - offset))
-        due = math.ceil(a - offset + width)
         latest = math.floor((horizon * SCALE - svc - d[c][0]) / SCALE)  # must still get home
-        due = max(min(due, latest, horizon), math.ceil(a))  # never cut a_i out of the window
+        if tw_mode == "planted":
+            # Draw the window so that it contains the reference arrival time a_i.
+            a = arrival[c] / SCALE
+            offset = rng_tw.uniform(0.0, width)  # where a_i falls inside the window
+            ready = max(0, math.floor(a - offset))
+            due = math.ceil(a - offset + width)
+            due = max(min(due, latest, horizon), math.ceil(a))  # never cut a_i out of the window
+        else:
+            # Independent window: centre uniform over [direct arrival, latest feasible start].
+            earliest = math.ceil(d[0][c] / SCALE)
+            centre = rng_tw.uniform(earliest, latest)
+            ready = max(0, round(centre - width / 2))
+            due = max(min(latest, round(centre + width / 2)), earliest)
         customers.append(
             Customer(
                 id=c,
@@ -217,12 +233,17 @@ def generate_instance(
             )
         )
 
+    fleet = default_fleet_size(n_customers, len(plan))
+    if tw_mode == "random":
+        plan = [[c] for c in range(1, n_customers + 1)]  # one dedicated vehicle per customer
+        fleet = n_customers
+    suffix = "-rw" if tw_mode == "random" else ""
     inst = Instance(
-        name=name or f"{layout}{n_customers}-{tw}-{capacity}-s{seed}",
+        name=name or f"{layout}{n_customers}-{tw}-{capacity}-s{seed}{suffix}",
         depot=Depot(*DEPOT_XY, ready_time=0.0, due_time=float(horizon)),
         customers=customers,
         vehicle_capacity=cap,
-        num_vehicles=default_fleet_size(n_customers, len(plan)),
+        num_vehicles=fleet,
         metadata={
             "generator": "route_opt.generator",
             "layout": layout,
@@ -230,6 +251,7 @@ def generate_instance(
             "seed": seed,
             "tw": tw,
             "capacity": capacity,
+            "tw_mode": tw_mode,
             "reference_routes": plan,
             "reference_distance": sum(route_distance(provisional, r) for r in plan) / SCALE,
         },

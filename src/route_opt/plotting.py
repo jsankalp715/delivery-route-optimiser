@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from route_opt.model import SCALE, Instance, Solution
+from route_opt.model import Instance, Solution
 
 SURFACE = "#fcfcfb"
 INK = "#0b0b0b"
@@ -123,7 +123,7 @@ def plot_routes(
         fontsize=10,
         color=INK_2,
     )
-    fig.tight_layout()
+    fig.tight_layout(rect=(0, 0, 1, 0.96))
     fig.savefig(path, dpi=150)
     plt.close(fig)
 
@@ -177,8 +177,8 @@ def plot_reduction_by_size(df: pd.DataFrame, path: str | Path) -> None:
     )
     ax.set_xticks(range(len(sizes)), [f"n = {n}" for n in sizes])
     ax.set_ylabel("distance reduction vs greedy NN (%)")
-    ax.set_title("ILP distance reduction per instance, by number of stops", loc="left")
-    ax.legend(loc="lower left", ncol=3)
+    ax.set_title("ILP distance reduction per instance, by number of stops", loc="left", pad=22)
+    ax.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=3, borderaxespad=0.2)
     fig.tight_layout()
     fig.savefig(path, dpi=150)
     plt.close(fig)
@@ -190,10 +190,8 @@ def plot_baseline_vs_ilp(df: pd.DataFrame, path: str | Path) -> None:
     fig, ax = plt.subplots(figsize=(6.0, 5.6))
     hi = float(df["baseline_dist"].max()) * 1.05
     xs = np.array([0, hi])
-    ax.plot(xs, xs, color=INK_2, linewidth=1, linestyle="-")
-    ax.plot(xs, 0.75 * xs, color=INK_2, linewidth=1, linestyle="--")
-    ax.annotate("y = x (no improvement)", (hi * 0.62, hi * 0.66), fontsize=8, color=INK_2, rotation=0)
-    ax.annotate("y = 0.75x (25% shorter)", (hi * 0.70, hi * 0.47), fontsize=8, color=INK_2)
+    ax.plot(xs, xs, color=INK_2, linewidth=1, linestyle="-", label="y = x (no improvement)")
+    ax.plot(xs, 0.75 * xs, color=INK_2, linewidth=1, linestyle="--", label="y = 0.75x (25% shorter)")
     for tw, (color, marker) in TW_STYLE.items():
         sub = df[df["tw"] == tw]
         ax.scatter(
@@ -257,6 +255,7 @@ def plot_solve_time(df: pd.DataFrame, path: str | Path) -> None:
     ax2.scatter(
         x, 100 * df["ilp_gap"], s=26, color=BLUE, marker="o", edgecolors=SURFACE, linewidths=0.8, zorder=3
     )
+    ax2.set_ylim(-0.5, max(1.0, 100 * float(df["ilp_gap"].max()) * 1.1))
     ax2.set_xlabel("customers (n)")
     ax2.set_ylabel("proven optimality gap at stop (%)")
     ax2.set_title("Gap between best solution and lower bound", loc="left")
@@ -295,7 +294,3 @@ def benchmark_plots(df: pd.DataFrame, out: str | Path) -> None:
                 sols[1].status = str(df.loc[df["instance"] == name, "ilp_status"].iloc[0])
                 plot_routes(inst, sols, out / "route_map_50.png")
                 break
-
-
-def scaled(v: float) -> float:
-    return v / SCALE

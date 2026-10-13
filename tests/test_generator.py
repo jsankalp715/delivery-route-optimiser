@@ -88,3 +88,16 @@ def test_invalid_arguments_raise(kwargs: dict) -> None:
     args = {"n_customers": 10, "layout": "R", "seed": 0} | kwargs
     with pytest.raises(ValueError):
         generate_instance(**args)
+
+
+@pytest.mark.parametrize("layout", LAYOUTS)
+@pytest.mark.parametrize("tw", list(TW_WIDTH))
+def test_random_window_mode_is_feasible_and_independent_of_the_plan(layout: str, tw: str) -> None:
+    """Solomon R-style windows: every customer servable by a dedicated vehicle; fleet = n."""
+    inst = generate_instance(40, layout, 3, tw=tw, tw_mode="random")
+    assert inst.name.endswith("-rw") and inst.num_vehicles == inst.n
+    dedicated = make_solution(inst, inst.metadata["reference_routes"], "dedicated")
+    assert validate(inst, dedicated).ok
+    planted = generate_instance(40, layout, 3, tw=tw)
+    assert [(c.x, c.y, c.demand) for c in inst.customers] == [(c.x, c.y, c.demand) for c in planted.customers]
+    assert [c.ready_time for c in inst.customers] != [c.ready_time for c in planted.customers]

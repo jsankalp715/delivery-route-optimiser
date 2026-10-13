@@ -21,8 +21,10 @@ Constraints:
    ``u[i] <= Q`` this caps the load of every route.
 4. **Fleet** - ``ceil(sum q / Q) <= sum_j x[0, j] <= K``.
 
-Arcs to/from the depot need no extra constraints: the domains of ``t`` and ``u`` already encode
-"reachable from the depot in time", "can get back before the horizon" and "load starts at q_i".
+Arcs to/from the depot normally need no extra constraints: the domains of ``t`` and ``u`` already
+encode "reachable from the depot in time", "can get back before the horizon" and "load starts at
+q_i". (If integer rounding breaks the triangle inequality through the depot, the direct-arc
+version is added explicitly as a reified constraint - see ``build_model``.)
 
 Objective: minimise ``sum d_ij x[i, j]`` (optionally with vehicles as a lexicographic secondary or
 primary term).
@@ -61,7 +63,7 @@ import numpy as np
 from ortools.sat.python import cp_model
 
 from route_opt.baseline import greedy_nearest_neighbour
-from route_opt.model import SCALE, Instance, Solution, make_solution
+from route_opt.model import Instance, Solution, make_solution
 
 VEHICLE_OBJECTIVES = ("none", "secondary", "primary")
 
@@ -92,7 +94,7 @@ def portfolio_params(workers: int) -> dict[str, Any]:
     """CP-SAT portfolio used with >= 4 workers: half full-model workers, half LNS.
 
     Calibrated on a 50-stop instance (see README "Design decisions"): versus CP-SAT's default
-    portfolio, the proven lower bound rose from 494 to 742 (reported gap 36% -> 5%) and tight
+    portfolio, the proven lower bound rose from 494 to 742 (reported gap 36% -> 4.6%) and tight
     instances finished with a proof of optimality instead of hitting the time limit.
     """
     if workers < 4:
@@ -180,11 +182,24 @@ def build_model(
     m.add_multiple_circuit([(i, j, lit) for (i, j), lit in x.items()])
 
     # ---- (2) Time windows, big-M free: x[i,j] => t_j >= t_i + s_i + d_ij -------------------
-    # (Depot arcs are covered by the domains: E_j already includes the drive from the depot and
-    #  L_i already includes the service at i plus the drive home before the horizon.)
+    # (Depot arcs are normally covered by the domains: E_j already includes the drive from the
+    #  depot and L_i the service at i plus the drive home before the horizon; see (2b).)
     for (i, j), lit in x.items():
         if i > 0 and j > 0:
             m.add(t[j] >= t[i] + s[i] + d[i][j]).only_enforce_if(lit)
+
+    # ---- (2b) Depot arcs -----------------------------------------------------------------
+    # Usually implied by the domains. They are added explicitly only when integer rounding makes
+    # the shortest path from/to the depot shorter than the direct arc (triangle inequality broken
+    # by < 0.01 units), so that the model stays exact in that corner case too.
+    e0, horizon = instance.ready[0], instance.horizon
+    for j in nodes:
+        if j == 0:
+            continue
+        if earliest[j] < e0 + d[0][j]:  # direct drive from the depot arrives later than E_j
+            m.add(t[j] >= e0 + d[0][j]).only_enforce_if(x[0, j])
+        if latest[j] > horizon - s[j] - d[j][0]:  # direct drive home is longer than the bound used
+            m.add(t[j] <= horizon - s[j] - d[j][0]).only_enforce_if(x[j, 0])
 
     # ---- (3) Capacity, MTZ-style: x[i,j] => u_j >= u_i + q_j ------------------------------
     # (From the depot, u_j >= q_j is the domain lower bound.) Loads only grow along a route and
@@ -408,7 +423,3 @@ def _extract_routes(solver: cp_model.CpSolver, built: IlpModel, n: int) -> list[
             cur = succ[cur]
         routes.append(route)
     return routes
-
-
-def scaled_to_units(value: float | None) -> float | None:
-    return None if value is None else value / SCALE

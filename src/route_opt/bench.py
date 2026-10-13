@@ -89,6 +89,7 @@ def instance_specs(cfg: dict[str, Any]) -> list[dict[str, Any]]:
                         "seed": int(seed),
                         "tw": cycle[(int(seed) - 1) % len(cycle)],
                         "capacity": cfg["capacity"],
+                        "tw_mode": cfg.get("tw_mode", "planted"),
                     }
                 )
     return specs
@@ -96,7 +97,12 @@ def instance_specs(cfg: dict[str, Any]) -> list[dict[str, Any]]:
 
 def build_instance(spec: dict[str, Any]) -> Instance:
     return generate_instance(
-        spec["n"], spec["layout"], spec["seed"], tw=spec["tw"], capacity=spec["capacity"]
+        spec["n"],
+        spec["layout"],
+        spec["seed"],
+        tw=spec["tw"],
+        capacity=spec["capacity"],
+        tw_mode=spec.get("tw_mode", "planted"),
     )
 
 

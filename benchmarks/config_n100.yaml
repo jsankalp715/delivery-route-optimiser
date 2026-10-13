@@ -1,0 +1,14 @@
+# Scaling probe at 100 stops (~10 min on 4 cores). Small sample (3 layouts x 2 seeds), reported
+# separately from the main grid; 120 s per instance (the CLI default of 1.2 s per stop).
+name: n100
+sizes: [100]
+types: [C, R, RC]
+seeds: [1, 2]
+tw_cycle: [tight, loose]
+capacity: medium
+ilp:
+  time_limit: {100: 120}
+  num_workers: 0
+reference:
+  time_limit_per_customer: 0.2
+output_dir: results/n100

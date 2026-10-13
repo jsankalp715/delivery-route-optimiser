@@ -1,0 +1,17 @@
+# Robustness probe against "planted window" bias (~10 min on 4 cores).
+# Same generator geometry/demands, but every time window is drawn independently (Solomon R-style:
+# centre uniform over the times the customer can be served straight from the depot) instead of
+# around a reference plan. Smaller sample than the main grid: 50 stops x 3 layouts x 4 seeds.
+name: random_windows
+sizes: [50]
+types: [C, R, RC]
+seeds: [1, 2, 3, 4]
+tw_cycle: [tight, loose]
+tw_mode: random
+capacity: medium
+ilp:
+  time_limit: {50: 60}
+  num_workers: 0
+reference:
+  time_limit_per_customer: 0.2
+output_dir: results/random_windows
