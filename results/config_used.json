@@ -1,0 +1,44 @@
+{
+  "name": "main",
+  "sizes": [
+    20,
+    30,
+    50,
+    75
+  ],
+  "types": [
+    "C",
+    "R",
+    "RC"
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "tw_cycle": [
+    "tight",
+    "loose"
+  ],
+  "capacity": "medium",
+  "ilp": {
+    "time_limit": {
+      "20": 20,
+      "30": 30,
+      "50": 60,
+      "75": 75
+    },
+    "num_workers": 0,
+    "vehicle_objective": "none"
+  },
+  "reference": {
+    "time_limit_per_customer": 0.2
+  },
+  "phase1_processes": 0,
+  "output_dir": "results"
+}

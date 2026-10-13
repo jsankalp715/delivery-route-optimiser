@@ -1,0 +1,166 @@
+[bench] 96 instances, phase 1 on 4 processes
+[bench] phase 1 done in 210s
+[ILP   1/96] C20-tight-medium-s1      greedy   457.42 -> ilp   265.41 (-42.0%)  ref   265.41  OPTIMAL  gap   0.0%    0.1s  [0.0 min]
+[ILP   2/96] C20-loose-medium-s2      greedy   399.11 -> ilp   243.11 (-39.1%)  ref   243.11  OPTIMAL  gap   0.0%    0.3s  [0.0 min]
+[ILP   3/96] C20-tight-medium-s3      greedy   308.77 -> ilp   246.17 (-20.3%)  ref   246.17  OPTIMAL  gap   0.0%    0.1s  [0.0 min]
+[ILP   4/96] C20-loose-medium-s4      greedy   595.74 -> ilp   304.77 (-48.8%)  ref   304.77  OPTIMAL  gap   0.0%    0.5s  [0.0 min]
+[ILP   5/96] C20-tight-medium-s5      greedy   480.74 -> ilp   299.81 (-37.6%)  ref   299.81  OPTIMAL  gap   0.0%    0.2s  [0.0 min]
+[ILP   6/96] C20-loose-medium-s6      greedy   436.54 -> ilp   325.15 (-25.5%)  ref   325.15  OPTIMAL  gap   0.0%    0.6s  [0.0 min]
+[ILP   7/96] C20-tight-medium-s7      greedy   472.11 -> ilp   353.30 (-25.2%)  ref   353.30  OPTIMAL  gap   0.0%    0.2s  [0.0 min]
+[ILP   8/96] C20-loose-medium-s8      greedy   394.85 -> ilp   191.45 (-51.5%)  ref   191.45  OPTIMAL  gap   0.0%    0.3s  [0.0 min]
+[ILP   9/96] R20-tight-medium-s1      greedy   919.77 -> ilp   508.93 (-44.7%)  ref   508.93  OPTIMAL  gap   0.0%    0.1s  [0.0 min]
+[ILP  10/96] R20-loose-medium-s2      greedy   841.20 -> ilp   573.09 (-31.9%)  ref   573.09  OPTIMAL  gap   0.0%    0.1s  [0.0 min]
+[ILP  11/96] R20-tight-medium-s3      greedy   864.72 -> ilp   546.19 (-36.8%)  ref   546.19  OPTIMAL  gap   0.0%    0.0s  [0.0 min]
+[ILP  12/96] R20-loose-medium-s4      greedy   840.56 -> ilp   547.47 (-34.9%)  ref   547.47  OPTIMAL  gap   0.0%    0.3s  [0.0 min]
+[ILP  13/96] R20-tight-medium-s5      greedy   576.16 -> ilp   465.70 (-19.2%)  ref   465.70  OPTIMAL  gap   0.0%    0.0s  [0.0 min]
+[ILP  14/96] R20-loose-medium-s6      greedy   682.91 -> ilp   462.98 (-32.2%)  ref   462.98  OPTIMAL  gap   0.0%    0.1s  [0.0 min]
+[ILP  15/96] R20-tight-medium-s7      greedy   772.95 -> ilp   500.42 (-35.3%)  ref   500.42  OPTIMAL  gap   0.0%    0.1s  [0.0 min]
+[ILP  16/96] R20-loose-medium-s8      greedy   759.23 -> ilp   471.89 (-37.8%)  ref   471.89  OPTIMAL  gap   0.0%    0.3s  [0.1 min]
+[ILP  17/96] RC20-tight-medium-s1     greedy   739.35 -> ilp   459.81 (-37.8%)  ref   459.81  OPTIMAL  gap   0.0%    0.1s  [0.1 min]
+[ILP  18/96] RC20-loose-medium-s2     greedy   595.56 -> ilp   396.28 (-33.5%)  ref   396.28  OPTIMAL  gap   0.0%    0.6s  [0.1 min]
+[ILP  19/96] RC20-tight-medium-s3     greedy   764.25 -> ilp   513.95 (-32.8%)  ref   513.95  OPTIMAL  gap   0.0%    0.1s  [0.1 min]
+[ILP  20/96] RC20-loose-medium-s4     greedy   574.63 -> ilp   404.60 (-29.6%)  ref   404.60  OPTIMAL  gap   0.0%    0.2s  [0.1 min]
+[ILP  21/96] RC20-tight-medium-s5     greedy   610.18 -> ilp   468.75 (-23.2%)  ref   468.75  OPTIMAL  gap   0.0%    0.0s  [0.1 min]
+[ILP  22/96] RC20-loose-medium-s6     greedy   778.86 -> ilp   526.17 (-32.4%)  ref   526.17  OPTIMAL  gap   0.0%    0.9s  [0.1 min]
+[ILP  23/96] RC20-tight-medium-s7     greedy   708.99 -> ilp   459.80 (-35.1%)  ref   459.80  OPTIMAL  gap   0.0%    0.0s  [0.1 min]
+[ILP  24/96] RC20-loose-medium-s8     greedy   626.47 -> ilp   444.17 (-29.1%)  ref   444.17  OPTIMAL  gap   0.0%    1.4s  [0.1 min]
+[ILP  25/96] C30-tight-medium-s1      greedy   952.93 -> ilp   616.37 (-35.3%)  ref   616.37  OPTIMAL  gap   0.0%    4.7s  [0.2 min]
+[ILP  26/96] C30-loose-medium-s2      greedy   371.92 -> ilp   276.76 (-25.6%)  ref   276.76  FEASIBLE gap   3.8%   30.0s  [0.7 min]
+[ILP  27/96] C30-tight-medium-s3      greedy   529.17 -> ilp   390.29 (-26.2%)  ref   390.29  OPTIMAL  gap   0.0%    0.1s  [0.7 min]
+[ILP  28/96] C30-loose-medium-s4      greedy   621.40 -> ilp   319.64 (-48.6%)  ref   319.64  OPTIMAL  gap   0.0%    1.5s  [0.7 min]
+[ILP  29/96] C30-tight-medium-s5      greedy   632.25 -> ilp   338.46 (-46.5%)  ref   338.46  OPTIMAL  gap   0.0%    0.2s  [0.7 min]
+[ILP  30/96] C30-loose-medium-s6      greedy   566.93 -> ilp   479.14 (-15.5%)  ref   501.85  OPTIMAL  gap   0.0%    6.4s  [0.8 min]
+[ILP  31/96] C30-tight-medium-s7      greedy   734.25 -> ilp   458.97 (-37.5%)  ref   458.97  OPTIMAL  gap   0.0%    0.2s  [0.8 min]
+[ILP  32/96] C30-loose-medium-s8      greedy   516.34 -> ilp   444.14 (-14.0%)  ref   444.14  OPTIMAL  gap   0.0%    1.9s  [0.9 min]
+[ILP  33/96] R30-tight-medium-s1      greedy   935.55 -> ilp   549.90 (-41.2%)  ref   549.90  OPTIMAL  gap   0.0%    0.1s  [0.9 min]
+[ILP  34/96] R30-loose-medium-s2      greedy   925.49 -> ilp   610.62 (-34.0%)  ref   610.62  OPTIMAL  gap   0.0%    1.4s  [0.9 min]
+[ILP  35/96] R30-tight-medium-s3      greedy   949.19 -> ilp   653.17 (-31.2%)  ref   653.17  OPTIMAL  gap   0.0%    0.3s  [0.9 min]
+[ILP  36/96] R30-loose-medium-s4      greedy   852.39 -> ilp   659.45 (-22.6%)  ref   659.45  OPTIMAL  gap   0.0%    5.4s  [1.0 min]
+[ILP  37/96] R30-tight-medium-s5      greedy  1035.31 -> ilp   591.55 (-42.9%)  ref   591.55  OPTIMAL  gap   0.0%    0.1s  [1.0 min]
+[ILP  38/96] R30-loose-medium-s6      greedy   922.18 -> ilp   645.72 (-30.0%)  ref   645.72  OPTIMAL  gap   0.0%    1.3s  [1.0 min]
+[ILP  39/96] R30-tight-medium-s7      greedy  1081.25 -> ilp   699.49 (-35.3%)  ref   699.49  OPTIMAL  gap   0.0%    0.1s  [1.0 min]
+[ILP  40/96] R30-loose-medium-s8      greedy   873.13 -> ilp   596.77 (-31.7%)  ref   596.77  OPTIMAL  gap   0.0%    7.3s  [1.1 min]
+[ILP  41/96] RC30-tight-medium-s1     greedy   979.82 -> ilp   515.60 (-47.4%)  ref   515.60  OPTIMAL  gap   0.0%    0.1s  [1.1 min]
+[ILP  42/96] RC30-loose-medium-s2     greedy   860.65 -> ilp   512.93 (-40.4%)  ref   512.93  OPTIMAL  gap   0.0%    3.7s  [1.2 min]
+[ILP  43/96] RC30-tight-medium-s3     greedy  1082.66 -> ilp   585.85 (-45.9%)  ref   612.16  OPTIMAL  gap   0.0%    0.4s  [1.2 min]
+[ILP  44/96] RC30-loose-medium-s4     greedy   739.11 -> ilp   459.81 (-37.8%)  ref   459.81  OPTIMAL  gap   0.0%    1.1s  [1.2 min]
+[ILP  45/96] RC30-tight-medium-s5     greedy  1063.22 -> ilp   651.24 (-38.7%)  ref   681.16  OPTIMAL  gap   0.0%    0.4s  [1.2 min]
+[ILP  46/96] RC30-loose-medium-s6     greedy   756.64 -> ilp   542.68 (-28.3%)  ref   557.11  OPTIMAL  gap   0.0%   15.3s  [1.5 min]
+[ILP  47/96] RC30-tight-medium-s7     greedy  1091.94 -> ilp   645.29 (-40.9%)  ref   645.29  OPTIMAL  gap   0.0%    0.1s  [1.5 min]
+[ILP  48/96] RC30-loose-medium-s8     greedy   857.42 -> ilp   589.00 (-31.3%)  ref   589.00  OPTIMAL  gap   0.0%    6.8s  [1.6 min]
+[ILP  49/96] C50-tight-medium-s1      greedy  1215.94 -> ilp   743.57 (-38.8%)  ref   757.93  OPTIMAL  gap   0.0%    1.4s  [1.6 min]
+[ILP  50/96] C50-loose-medium-s2      greedy   909.09 -> ilp   654.59 (-28.0%)  ref   661.75  FEASIBLE gap   4.5%   60.0s  [2.6 min]
+[ILP  51/96] C50-tight-medium-s3      greedy  1337.47 -> ilp   709.96 (-46.9%)  ref   724.34  OPTIMAL  gap   0.0%    3.2s  [2.7 min]
+[ILP  52/96] C50-loose-medium-s4      greedy   966.96 -> ilp   655.00 (-32.3%)  ref   657.98  FEASIBLE gap   5.9%   60.1s  [3.7 min]
+[ILP  53/96] C50-tight-medium-s5      greedy  1251.89 -> ilp   801.68 (-36.0%)  ref   806.65  OPTIMAL  gap   0.0%    3.0s  [3.7 min]
+[ILP  54/96] C50-loose-medium-s6      greedy  1119.16 -> ilp   678.69 (-39.4%)  ref   685.47  OPTIMAL  gap   0.0%   43.3s  [4.4 min]
+[ILP  55/96] C50-tight-medium-s7      greedy  1156.95 -> ilp   673.75 (-41.8%)  ref   681.17  OPTIMAL  gap   0.0%    4.3s  [4.5 min]
+[ILP  56/96] C50-loose-medium-s8      greedy   927.41 -> ilp   610.79 (-34.1%)  ref   610.79  FEASIBLE gap   1.2%   60.1s  [5.5 min]
+[ILP  57/96] R50-tight-medium-s1      greedy  1592.81 -> ilp   895.89 (-43.8%)  ref   895.89  OPTIMAL  gap   0.0%    0.4s  [5.5 min]
+[ILP  58/96] R50-loose-medium-s2      greedy  1417.96 -> ilp   900.80 (-36.5%)  ref   912.93  FEASIBLE gap   8.7%   60.1s  [6.5 min]
+[ILP  59/96] R50-tight-medium-s3      greedy  2000.02 -> ilp   971.57 (-51.4%)  ref   971.57  OPTIMAL  gap   0.0%    0.8s  [6.5 min]
+[ILP  60/96] R50-loose-medium-s4      greedy  1280.64 -> ilp   964.00 (-24.7%)  ref   936.95  FEASIBLE gap   9.2%   60.0s  [7.5 min]
+[ILP  61/96] R50-tight-medium-s5      greedy  1603.11 -> ilp  1007.14 (-37.2%)  ref  1015.31  OPTIMAL  gap   0.0%    4.0s  [7.6 min]
+[ILP  62/96] R50-loose-medium-s6      greedy  1425.69 -> ilp   929.39 (-34.8%)  ref   882.53  FEASIBLE gap  10.1%   60.1s  [8.6 min]
+[ILP  63/96] R50-tight-medium-s7      greedy  1557.51 -> ilp   945.79 (-39.3%)  ref   945.79  OPTIMAL  gap   0.0%    1.1s  [8.6 min]
+[ILP  64/96] R50-loose-medium-s8      greedy  1525.59 -> ilp   963.05 (-36.9%)  ref   963.41  FEASIBLE gap   4.9%   60.1s  [9.6 min]
+[ILP  65/96] RC50-tight-medium-s1     greedy  1374.92 -> ilp   813.67 (-40.8%)  ref   844.16  OPTIMAL  gap   0.0%   29.6s  [10.1 min]
+[ILP  66/96] RC50-loose-medium-s2     greedy  1485.53 -> ilp   861.88 (-42.0%)  ref   859.69  FEASIBLE gap   4.2%   60.1s  [11.1 min]
+[ILP  67/96] RC50-tight-medium-s3     greedy  1715.23 -> ilp   903.23 (-47.3%)  ref   947.53  OPTIMAL  gap   0.0%   21.4s  [11.5 min]
+[ILP  68/96] RC50-loose-medium-s4     greedy  1047.56 -> ilp   750.28 (-28.4%)  ref   748.88  FEASIBLE gap   5.2%   60.0s  [12.5 min]
+[ILP  69/96] RC50-tight-medium-s5     greedy  1759.06 -> ilp   871.94 (-50.4%)  ref   871.94  OPTIMAL  gap   0.0%    1.0s  [12.5 min]
+[ILP  70/96] RC50-loose-medium-s6     greedy  1104.12 -> ilp   753.96 (-31.7%)  ref   755.23  FEASIBLE gap   6.3%   60.0s  [13.5 min]
+[ILP  71/96] RC50-tight-medium-s7     greedy  1265.88 -> ilp   805.18 (-36.4%)  ref   813.31  OPTIMAL  gap   0.0%    5.0s  [13.6 min]
+[ILP  72/96] RC50-loose-medium-s8     greedy  1172.80 -> ilp   803.74 (-31.5%)  ref   799.13  FEASIBLE gap   8.8%   60.1s  [14.6 min]
+[ILP  73/96] C75-tight-medium-s1      greedy  1949.61 -> ilp  1068.50 (-45.2%)  ref  1115.08  FEASIBLE gap   4.4%   75.1s  [15.8 min]
+[ILP  74/96] C75-loose-medium-s2      greedy  1208.31 -> ilp   814.38 (-32.6%)  ref   815.98  FEASIBLE gap   9.9%   75.1s  [17.1 min]
+[ILP  75/96] C75-tight-medium-s3      greedy  2282.75 -> ilp  1026.83 (-55.0%)  ref  1026.83  OPTIMAL  gap   0.0%   15.4s  [17.3 min]
+[ILP  76/96] C75-loose-medium-s4      greedy  1131.27 -> ilp   844.30 (-25.4%)  ref   847.87  FEASIBLE gap  15.5%   75.1s  [18.6 min]
+[ILP  77/96] C75-tight-medium-s5      greedy  2196.84 -> ilp  1057.40 (-51.9%)  ref  1057.40  OPTIMAL  gap   0.0%    3.5s  [18.7 min]
+[ILP  78/96] C75-loose-medium-s6      greedy  1413.37 -> ilp   858.00 (-39.3%)  ref   866.95  FEASIBLE gap  13.7%   75.1s  [19.9 min]
+[ILP  79/96] C75-tight-medium-s7      greedy  1757.22 -> ilp   981.27 (-44.2%)  ref   957.43  FEASIBLE gap   7.2%   75.1s  [21.2 min]
+[ILP  80/96] C75-loose-medium-s8      greedy  1706.05 -> ilp  1074.73 (-37.0%)  ref  1057.68  FEASIBLE gap  11.8%   75.1s  [22.4 min]
+[ILP  81/96] R75-tight-medium-s1      greedy  2125.52 -> ilp  1367.39 (-35.7%)  ref  1367.39  OPTIMAL  gap   0.0%    3.7s  [22.5 min]
+[ILP  82/96] R75-loose-medium-s2      greedy  1863.25 -> ilp  1241.05 (-33.4%)  ref  1221.33  FEASIBLE gap  11.7%   75.1s  [23.7 min]
+[ILP  83/96] R75-tight-medium-s3      greedy  2205.94 -> ilp  1220.89 (-44.7%)  ref  1223.97  OPTIMAL  gap   0.0%    4.8s  [23.8 min]
+[ILP  84/96] R75-loose-medium-s4      greedy  1801.76 -> ilp  1174.42 (-34.8%)  ref  1189.70  FEASIBLE gap  10.3%   75.2s  [25.1 min]
+[ILP  85/96] R75-tight-medium-s5      greedy  2147.33 -> ilp  1299.10 (-39.5%)  ref  1299.10  OPTIMAL  gap   0.0%    4.1s  [25.1 min]
+[ILP  86/96] R75-loose-medium-s6      greedy  1923.04 -> ilp  1328.41 (-30.9%)  ref  1286.44  FEASIBLE gap  15.3%   75.1s  [26.4 min]
+[ILP  87/96] R75-tight-medium-s7      greedy  2213.22 -> ilp  1175.66 (-46.9%)  ref  1175.66  OPTIMAL  gap   0.0%    9.8s  [26.5 min]
+[ILP  88/96] R75-loose-medium-s8      greedy  1511.97 -> ilp  1263.61 (-16.4%)  ref  1206.27  FEASIBLE gap  17.2%   75.1s  [27.8 min]
+[ILP  89/96] RC75-tight-medium-s1     greedy  1913.44 -> ilp  1190.82 (-37.8%)  ref  1203.11  FEASIBLE gap   4.6%   75.1s  [29.0 min]
+[ILP  90/96] RC75-loose-medium-s2     greedy  1899.30 -> ilp  1123.03 (-40.9%)  ref  1176.44  FEASIBLE gap   7.4%   75.1s  [30.3 min]
+[ILP  91/96] RC75-tight-medium-s3     greedy  1852.28 -> ilp  1171.90 (-36.7%)  ref  1219.56  FEASIBLE gap   1.7%   75.1s  [31.5 min]
+[ILP  92/96] RC75-loose-medium-s4     greedy  1679.08 -> ilp  1070.17 (-36.3%)  ref  1110.17  FEASIBLE gap   8.3%   75.1s  [32.8 min]
+[ILP  93/96] RC75-tight-medium-s5     greedy  2029.83 -> ilp  1052.18 (-48.2%)  ref  1052.18  OPTIMAL  gap   0.0%    8.7s  [32.9 min]
+[ILP  94/96] RC75-loose-medium-s6     greedy  1715.14 -> ilp  1128.52 (-34.2%)  ref  1145.58  FEASIBLE gap  11.4%   75.1s  [34.2 min]
+[ILP  95/96] RC75-tight-medium-s7     greedy  1889.70 -> ilp  1060.27 (-43.9%)  ref  1060.27  OPTIMAL  gap   0.0%    8.7s  [34.3 min]
+[ILP  96/96] RC75-loose-medium-s8     greedy  1665.17 -> ilp  1169.43 (-29.8%)  ref  1163.81  FEASIBLE gap  11.2%   75.1s  [35.6 min]
+[bench] wrote results/benchmark.csv (96 rows) in 39.1 min
+## Distance reduction of the ILP vs greedy nearest neighbour
+
+| group | instances | mean | median | min | max | std |
+|---|---:|---:|---:|---:|---:|---:|
+| **all** | 96 | 36.2% | 36.4% | 14.0% | 55.0% | 8.4% |
+| **n >= 50** | 48 | 38.1% | 37.1% | 16.4% | 55.0% | 7.7% |
+| n = 20 | 24 | 34.0% | 34.2% | 19.2% | 51.5% | 8.1% |
+| n = 30 | 24 | 34.5% | 35.3% | 14.0% | 48.6% | 9.4% |
+| n = 50 | 24 | 37.9% | 37.0% | 24.7% | 51.4% | 6.9% |
+| n = 75 | 24 | 38.4% | 37.4% | 16.4% | 55.0% | 8.5% |
+| type C | 32 | 36.5% | 37.6% | 14.0% | 55.0% | 10.6% |
+| type R | 32 | 35.3% | 35.3% | 16.4% | 51.4% | 7.6% |
+| type RC | 32 | 36.9% | 36.6% | 23.2% | 50.4% | 6.7% |
+| loose windows | 48 | 32.9% | 32.5% | 14.0% | 51.5% | 7.6% |
+| tight windows | 48 | 39.6% | 39.4% | 19.2% | 55.0% | 7.9% |
+| n = 20, loose windows | 12 | 35.5% | 33.0% | 25.5% | 51.5% | 7.8% |
+| n = 20, tight windows | 12 | 32.5% | 35.2% | 19.2% | 44.7% | 8.5% |
+| n = 30, loose windows | 12 | 30.0% | 30.6% | 14.0% | 48.6% | 9.9% |
+| n = 30, tight windows | 12 | 39.1% | 39.8% | 26.2% | 47.4% | 6.4% |
+| n = 50, loose windows | 12 | 33.3% | 33.2% | 24.7% | 42.0% | 5.0% |
+| n = 50, tight windows | 12 | 42.5% | 41.3% | 36.0% | 51.4% | 5.4% |
+| n = 75, loose windows | 12 | 32.6% | 33.8% | 16.4% | 40.9% | 6.6% |
+| n = 75, tight windows | 12 | 44.1% | 44.4% | 35.7% | 55.0% | 6.0% |
+
+## Sensitivity and cross-checks
+
+| group | instances | mean | median | min | max | std |
+|---|---:|---:|---:|---:|---:|---:|
+| ILP vs time-oriented NN (stronger greedy) | 96 | 27.6% | 28.7% | 0.0% | 45.3% | 8.8% |
+| ILP vs time-oriented NN, n >= 50 | 48 | 30.0% | 30.5% | 18.3% | 39.7% | 4.9% |
+| Routing-library reference vs greedy | 96 | 36.0% | 35.7% | 11.5% | 55.0% | 8.3% |
+| ILP distance relative to reference (+ = ILP longer) | 96 | -0.4% | 0.0% | -4.7% | 5.3% | 1.6% |
+| ILP vs reference, n = 20 | 24 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% |
+| ILP vs reference, n = 30 | 24 | -0.7% | 0.0% | -4.5% | 0.0% | 1.5% |
+| ILP vs reference, n = 50 | 24 | -0.4% | -0.3% | -4.7% | 5.3% | 1.9% |
+| ILP vs reference, n = 75 | 24 | -0.3% | 0.0% | -4.5% | 4.8% | 2.2% |
+
+## ILP optimality gap (proven, at the time limit)
+
+| group | instances | mean | median | min | max | std |
+|---|---:|---:|---:|---:|---:|---:|
+| all | 96 | 2.4% | 0.0% | 0.0% | 17.2% | 4.4% |
+| n = 20 | 24 | 0.0% | 0.0% | 0.0% | 0.0% | 0.0% |
+| n = 30 | 24 | 0.2% | 0.0% | 0.0% | 3.8% | 0.8% |
+| n = 50 | 24 | 2.9% | 0.0% | 0.0% | 10.1% | 3.7% |
+| n = 75 | 24 | 6.7% | 7.3% | 0.0% | 17.2% | 6.0% |
+
+## ILP status and solve time
+
+| n | time limit (s) | status counts | mean time (s) | max time (s) |
+|---:|---:|---|---:|---:|
+| 20 | 20 | OPTIMAL: 24 | 0.3 | 1.4 |
+| 30 | 30 | FEASIBLE: 1, OPTIMAL: 23 | 3.7 | 30.0 |
+| 50 | 60 | FEASIBLE: 11, OPTIMAL: 13 | 32.5 | 60.1 |
+| 75 | 75 | FEASIBLE: 16, OPTIMAL: 8 | 52.5 | 75.2 |
+
+## Vehicles used
+
+| group | instances | mean | median | min | max | std |
+|---|---:|---:|---:|---:|---:|---:|
+| baseline | 96 | 9.77 | 9.00 | 3.00 | 22.00 | 5.04 |
+| tonn | 96 | 6.97 | 6.00 | 2.00 | 14.00 | 3.27 |
+| ilp | 96 | 6.08 | 5.50 | 2.00 | 12.00 | 2.85 |
+| ref | 96 | 6.03 | 5.50 | 2.00 | 11.00 | 2.77 |
+
+ILP never worse than baseline: **True**; ILP <= reference on 85/96 instances.
+

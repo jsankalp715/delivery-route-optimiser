@@ -136,8 +136,8 @@ With $|A| \le n(n+1)$ arcs:
 | linear equality / bounds | 1 (vehicle count) + 1 (cut-off) |
 
 So the model is $O(n^2)$ in variables, constraints and memory, and building it takes $O(n^2)$ time.
-For $n = 50$ there are at most 2,550 arcs. In the benchmark, pruning kept about 60-80 % of them with
-loose windows and about 30-55 % with tight windows (column `ilp_arcs_kept` in `results/benchmark.csv`). Solving is NP-hard (it generalises the TSP), so CP-SAT runs under a
+For $n = 50$ there are at most 2,550 arcs. In the benchmark, pruning kept 61-79 % of them with
+loose windows and 32-56 % with tight windows (column `ilp_arcs_kept` in `results/benchmark.csv`). Solving is NP-hard (it generalises the TSP), so CP-SAT runs under a
 wall-clock limit. The result is the *best solution found within the limit*, together with CP-SAT's
 proven lower bound $LB$ and the relative gap
 

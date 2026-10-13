@@ -165,20 +165,11 @@ def plot_reduction_by_size(df: pd.DataFrame, path: str | Path) -> None:
                 zorder=3,
                 label=f"type {typ}" if i == 0 else None,
             )
-    ax.axhline(25, color=INK_2, linestyle="--", linewidth=1)
-    ax.annotate(
-        "25% reference line",
-        (len(sizes) - 0.5, 25),
-        xytext=(0, 4),
-        textcoords="offset points",
-        ha="right",
-        fontsize=8,
-        color=INK_2,
-    )
+    ax.axhline(25, color=INK_2, linestyle="--", linewidth=1, label="25% reference")
     ax.set_xticks(range(len(sizes)), [f"n = {n}" for n in sizes])
     ax.set_ylabel("distance reduction vs greedy NN (%)")
     ax.set_title("ILP distance reduction per instance, by number of stops", loc="left", pad=22)
-    ax.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=3, borderaxespad=0.2)
+    ax.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=4, borderaxespad=0.2)
     fig.tight_layout()
     fig.savefig(path, dpi=150)
     plt.close(fig)

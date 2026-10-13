@@ -160,7 +160,8 @@ reference gets 0.2 s per stop on one thread. The whole run took [[RUNTIME_MIN]] 
 1. **Distance:** [[ALL_MEAN]] shorter on average (median [[ALL_MEDIAN]], range [[ALL_MIN]] to [[ALL_MAX]]); [[BIG_MEAN]] at 50+ stops.
    It is never worse than greedy (guaranteed by construction and checked on every instance).
 2. **Window regime matters:** [[TIGHT_MEAN]] with tight windows vs [[LOOSE_MEAN]] with loose windows. With tight windows,
-   nearest neighbour waits for the closest customer and strands others.
+   nearest neighbour waits for the closest customer and strands others. This holds from 30 stops up; at 20 stops
+   the order flips (see the per-size rows below).
 3. **Fewer vehicles as a side effect:** [[VEH_BASE_MEAN]] → [[VEH_ILP_MEAN]] vehicles on average, although
    vehicles are not in the objective.
 4. **A stronger greedy closes part of the gap:** against Solomon's time-oriented NN the ILP is [[TONN_ALL_MEAN]] shorter
